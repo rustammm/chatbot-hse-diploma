@@ -1,0 +1,16 @@
+{
+    "model_path" : "./models/chats_merged",
+    "max_length": 40,
+    "top_k" : 40,
+    "name": "model-40",
+    "service_registry": {
+        "url": "http://10.129.0.9:50003",
+        "conf": {
+            "name": "model-40",
+            "url": "http://{ip}:50001/api",
+            "priority": 4,
+            "timeout": 5,
+            "history_len": 1
+        }
+    }
+}

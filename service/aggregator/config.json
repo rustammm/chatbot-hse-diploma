@@ -1,0 +1,55 @@
+{
+    "service_conf" : [
+        {
+            "name": "wiki",
+            "url": "http://10.129.0.23:50002/api",
+            "priority": 5,
+            "timeout": 6,
+            "history_len": 0
+        },
+        {
+            "name": "model-40",
+            "url": "http://10.129.0.15:50001/api",
+            "priority": 4,
+            "timeout": 5,
+            "history_len": 0
+        },
+        {
+            "name": "model-40",
+            "url": "http://10.129.0.6:50001/api",
+            "priority": 4,
+            "timeout": 5,
+            "history_len": 1
+        },
+        {
+            "name": "model-30",
+            "url": "http://10.129.0.29:50001/api",
+            "priority": 3,
+            "timeout": 5,
+            "history_len": 0
+        },
+        {
+            "name": "model-20",
+            "url": "http://10.129.0.16:50001/api",
+            "priority": 2,
+            "timeout": 5,
+            "history_len": 0
+        }
+    ],
+    "user_quoatas": {
+        "max_in_flight": 1000,
+        "max_in_flight_for_uid": 10
+    },
+    "service_registry": {
+        "url": "http://10.129.0.9:50003",
+        "conf": {
+
+            "name": "aggregator",
+            "url": "http://{ip}:50000/api",
+            "priority": 6,
+            "timeout": 5,
+            "history_len": 10
+        },
+        "services_names": ["model-20", "model-30", "model-40", "wiki"]
+    }
+}

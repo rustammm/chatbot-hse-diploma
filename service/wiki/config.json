@@ -1,0 +1,13 @@
+{
+    "name": "wiki",
+    "service_registry": {
+        "url": "http://10.129.0.9:50003",
+        "conf": {
+            "name": "wiki",
+            "url": "http://{ip}:50002/api",
+            "priority": 5,
+            "timeout": 5,
+            "history_len": 0
+        }
+    }
+}
